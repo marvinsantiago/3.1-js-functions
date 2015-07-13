@@ -51,16 +51,18 @@ console.assert(sum(4, 100) === 104);
  * Write a function that calculates the sum of all the numbers in an array
  */
 
-// function sumOfArray(arr){
-//     var sum = 0
-//     // YOUR CODE HERE
-//     return sum
-// }
+function sumOfArray(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i += 1) {
+        sum += arr[i];
+    }
+            return sum
+}
 
-// console.assert(sumOfArray([1, 2]) === 3);
-// console.assert(sumOfArray([]) === 0);
-// console.assert(sumOfArray([1, 2, 3]) === 6);
-// console.assert(sumOfArray([10, 9, 8]) === 27);
+console.assert(sumOfArray([1, 2]) === 3);
+console.assert(sumOfArray([]) === 0);
+console.assert(sumOfArray([1, 2, 3]) === 6);
+console.assert(sumOfArray([10, 9, 8]) === 27);
 
 // /**
 //  * PART 2
@@ -72,7 +74,13 @@ console.assert(sum(4, 100) === 104);
 //  */
 
 // function GCD(a, b){
-//     // YOUR CODE HERE
+//     var aDenoms = denominators(a);
+//     var bDenoms = denominators(b);
+//     var ret = 1;
+//     if (bDenoms.indexOf()) {
+//         // change ret
+//     }
+//     return ret
 // }
 
 // console.assert(GCD(5,1) === 1);
