@@ -98,14 +98,20 @@ console.assert(GCD(50,20) === 10);
 //  * write a function that prints out the Least Common Multiple of two numbers
 //  */
 
-// function LCM(a, b){
-//     // YOUR CODE HERE
-// }
+function LCM(a, b){
+    // YOUR CODE HERE
+    if(a === 0 || b ===0){
+        return 1;
+    }
+    else{
+        return a * b / GCD(a, b);
+    }
+}
 
-// console.assert(LCM(10,10) === 10)
-// console.assert(LCM(2,5) === 10)
-// console.assert(LCM(3,6) === 6)
-// console.assert(LCM(0,1) === 1)
+console.assert(LCM(10,10) === 10);
+console.assert(LCM(2,5) === 10);
+console.assert(LCM(3,6) === 6);
+console.assert(LCM(0,1) === 1);
 
 // /**
 //  * Part 4
