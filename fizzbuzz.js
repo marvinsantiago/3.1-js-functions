@@ -31,12 +31,12 @@ console.assert(arrayEquals(denominators(4), [1, 2, 4]));
 console.assert(arrayEquals(denominators(24), [1, 2, 3, 4, 6, 8, 12, 24]));
 
 
-/**
- * PART 0
- *
- * Write a function that takes two numbers as
- * arguments and computes the sum of those two numbers.
- */
+// *
+//  * PART 0
+//  *
+//  * Write a function that takes two numbers as
+//  * arguments and computes the sum of those two numbers.
+
 
 function sum(a, b) {
     return a + b;
@@ -54,7 +54,7 @@ console.assert(sum(4, 100) === 104);
 function sumOfArray(arr) {
     var sum = 0;
     for (var i = 0; i < arr.length; i += 1) {
-        sum += arr[i];
+        sum += arr[i]
     }
             return sum
 }
@@ -77,7 +77,7 @@ console.assert(sumOfArray([10, 9, 8]) === 27);
 //     var aDenoms = denominators(a);
 //     var bDenoms = denominators(b);
 //     var ret = 1;
-//     if (bDenoms.indexOf()) {
+//     if (bDenoms.indexOf()!== -1) {
 //         // change ret
 //     }
 //     return ret
@@ -113,12 +113,25 @@ console.assert(sumOfArray([10, 9, 8]) === 27);
 //  * - for every number that is a multiple of 3 and 5, return "fizzbuzz"
 //  */
 
-// function fizzbuzz(N){
-//     // YOUR CODE HERE
-// }
+function fizzbuzz(N){
+    var results = "";
+    for(var i = 1; i <= N; i++) {
+        if (!(i % 3 === 0 || i % 5 === 0)) {
+                results += ".";
+            }
+        else if (i % 3 === 0 && i % 5 !== 0) {
+                results += "fizz";
+            }
+        else if (i % 5 === 0 && i % 3 !== 0) {
+                results += "buzz";
+            }
+        else results += "fizzbuzz";
+    }
+    return results;
+}
 
-// console.assert(fizzbuzz(1) === ".")
-// console.assert(fizzbuzz(2) === "..")
-// console.assert(fizzbuzz(3) === "..fizz")
-// console.assert(fizzbuzz(5) === "..fizz.buzz")
-// console.assert(fizzbuzz(10) === "..fizz.buzzfizz..fizzbuzz")
+console.assert(fizzbuzz(1) === ".");
+console.assert(fizzbuzz(2) === "..");
+console.assert(fizzbuzz(3) === "..fizz");
+console.assert(fizzbuzz(5) === "..fizz.buzz");
+console.assert(fizzbuzz(10) === "..fizz.buzzfizz..fizzbuzz");
