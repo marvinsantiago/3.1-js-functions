@@ -54,9 +54,9 @@ console.assert(sum(4, 100) === 104);
 function sumOfArray(arr) {
     var sum = 0;
     for (var i = 0; i < arr.length; i += 1) {
-        sum += arr[i]
+        sum += arr[i];
     }
-            return sum
+            return sum;
 }
 
 console.assert(sumOfArray([1, 2]) === 3);
@@ -73,20 +73,24 @@ console.assert(sumOfArray([10, 9, 8]) === 27);
 //  * You should use the denominators function from today's class
 //  */
 
-// function GCD(a, b){
-//     var aDenoms = denominators(a);
-//     var bDenoms = denominators(b);
-//     var ret = 1;
-//     if (bDenoms.indexOf()!== -1) {
-//         // change ret
-//     }
-//     return ret
-// }
+function GCD(a, b){
+    var aDenoms = denominators(a);
+    var bDenoms = denominators(b);
+    var ret;
+    for (var i = 0; i < aDenoms.length; i++) {
+        var current = aDenoms[i];
+        if (bDenoms.indexOf(current)!== -1) {
+            ret = current;
+    }
+        // change ret
+    }
+    return ret;
+}
 
-// console.assert(GCD(5,1) === 1);
-// console.assert(GCD(15,3) === 3);
-// console.assert(GCD(15,5) === 5);
-// console.assert(GCD(50,20) === 10);
+console.assert(GCD(5,1) === 1);
+console.assert(GCD(15,3) === 3);
+console.assert(GCD(15,5) === 5);
+console.assert(GCD(50,20) === 10);
 
 // /**
 //  * PART 3
